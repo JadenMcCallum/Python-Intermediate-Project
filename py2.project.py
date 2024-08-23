@@ -4,7 +4,8 @@ import requests
 
 
 ask = input("Which pokemon would you like to pick? ")
- 
+ask = ask.lower() 
+
 url = requests.get(f"https://pokeapi.co/api/v2/pokemon/{ask}")
 person = url.json()
 
